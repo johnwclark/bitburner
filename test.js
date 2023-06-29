@@ -9,3 +9,4 @@ export async function main(ns) {
   ns.exec("deploy-local.js","home",1,target );
 
 }
+// here JWC
