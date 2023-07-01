@@ -7,6 +7,10 @@ export async function main(ns) {
   }
 
   let target = ns.args[0];
+  if ( ns.hasRootAccess(target) ) {
+    ns.tprint("target machine " + target + " already nuked");
+    ns.exit(2);
+  }
   ns.tprint("target = " + target);
 
   let portsNeeded = ns.getServerNumPortsRequired(target);
